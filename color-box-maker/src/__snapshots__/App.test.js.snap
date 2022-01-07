@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <div
+      class="NewBoxList"
+    >
+      <div
+        class="NewBoxForm"
+      >
+        this is a form to make a new box
+      </div>
+      <div
+        class="Box"
+        data-testid="box0"
+        style="background-color: blue; width: 150px; height: 90px;"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
