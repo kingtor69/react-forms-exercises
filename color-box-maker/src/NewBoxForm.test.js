@@ -9,3 +9,4 @@ it('renders snapshot', () => {
   const { asFragment } = render(<NewBoxForm />);
   expect(asFragment()).toMatchSnapshot();
 });
+
