@@ -2,8 +2,23 @@
 
 exports[`renders snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <form
     class="NewTodoForm"
-  />
+  >
+    <label
+      for="new-todo"
+    >
+      New todo:
+    </label>
+    <input
+      id="new-todo"
+      placeholder="new todo"
+      type="text"
+      value=""
+    />
+    <button>
+      Create new todo
+    </button>
+  </form>
 </DocumentFragment>
 `;

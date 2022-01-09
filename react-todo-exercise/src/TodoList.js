@@ -19,7 +19,9 @@ const TodoList = () => {
 
   return (
     <div className="TodoList">
-      <NewTodoForm addTodo={addTodo} />
+      <NewTodoForm 
+        addTodo={addTodo} 
+      />
       <ul>
         {todoList.map((todo, i) => (
           <Todo 
