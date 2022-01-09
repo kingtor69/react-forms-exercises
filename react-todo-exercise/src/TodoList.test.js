@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
-import App from './App';
+import TodoList from './TodoList';
 
 it('renders without crashing', () => {
-  render(<App />);
+  render(<TodoList />);
 });
 
 it('renders snapshot', () => {
-  const { asFragment } = render(<App />);
+  const { asFragment } = render(<TodoList />);
   expect(asFragment()).toMatchSnapshot();
 });
