@@ -3,14 +3,7 @@ import NewBoxForm from './NewBoxForm.js';
 import Box from './Box.js';
 
 const BoxList = () => {
-  const initialBoxState = [
-    // {
-    //   color: "blue",
-    //   width: 150,
-    //   height: 90
-    // }
-  ];
-  const [ boxes, setBoxes ] = useState(initialBoxState);
+  const [ boxes, setBoxes ] = useState([]);
   const makeNewBox = (newBoxData) => {
     setBoxes(boxes => [...boxes, newBoxData])
   };
