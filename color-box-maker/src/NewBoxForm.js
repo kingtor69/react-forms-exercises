@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {cloneElement, useState} from 'react';
+import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
 
-const NewBoxForm = () => {
+const NewBoxForm = ({makeNewBox}) => {
   const initialFormData = {
     color: "",
     width: "",
@@ -9,20 +10,17 @@ const NewBoxForm = () => {
   const [formData, setFormData] = useState(initialFormData);
     
   const handleChange = (e) => {
-    e.preventDefault();
-    const target = {};
-    for (const key in e.target) {
-      target[key] = key === "width" || key === "height" ? `${e.target.key}px` : e.target[key]
-    }
     setFormData(data => ({
       ...data,
-      [target.name]: target.value
+      [e.target.name]: e.target.value
     }));
   };
 
   const handleSubmit = (e) => {
-
-  }
+    e.preventDefault();
+    makeNewBox(formData);
+    setFormData(initialFormData);
+  };
 
   return (
     <div className="NewBoxForm">
@@ -36,7 +34,7 @@ const NewBoxForm = () => {
           <input
             type="text"
             placeholder="color"
-            id="color"
+            id="color"            name="color"
             value={formData.color}
             onChange={handleChange}
           />
@@ -50,7 +48,7 @@ const NewBoxForm = () => {
           <input
             type="text"
             placeholder="width"
-            id="width"
+            id="width"            name="width"
             value={formData.width}
             onChange={handleChange}
           />
@@ -64,13 +62,17 @@ const NewBoxForm = () => {
           <input
             type="text"
             placeholder="height"
-            id="height"
+            id="height"            name="height"
             value={formData.height}
             onChange={handleChange}
           />
         </div>
         <div className="form-group">
-          <button type="submit">make new box</button>
+          <button 
+            onClick={handleSubmit}
+          >
+            make new box
+          </button>
         </div>
       </form>
     </div>

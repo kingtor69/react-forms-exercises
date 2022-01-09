@@ -11,7 +11,67 @@ exports[`renders snapshot 1`] = `
       <div
         class="NewBoxForm"
       >
-        this is a form to make a new box
+        <form
+          class="form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              for="color"
+            >
+              Color:
+            </label>
+            <input
+              id="color"
+              name="color"
+              placeholder="color"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <label
+              for="width"
+            >
+              Width:
+            </label>
+            <input
+              id="width"
+              name="width"
+              placeholder="width"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <label
+              for="height"
+            >
+              Height:
+            </label>
+            <input
+              id="height"
+              name="height"
+              placeholder="height"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <button
+              type="submit"
+            >
+              make new box
+            </button>
+          </div>
+        </form>
       </div>
       <div
         class="Box"
