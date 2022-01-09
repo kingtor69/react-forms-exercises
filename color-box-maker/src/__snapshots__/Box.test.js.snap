@@ -4,6 +4,16 @@ exports[`renders snapshot 1`] = `
 <DocumentFragment>
   <div
     class="Box"
-  />
+  >
+    <div
+      class="boxDiv"
+      data-testid="boxundefined"
+    />
+    <button
+      class="removeBoxButton"
+    >
+      X
+    </button>
+  </div>
 </DocumentFragment>
 `;

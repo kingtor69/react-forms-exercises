@@ -16,15 +16,16 @@ it('renders a new box', () => {
     width: "90",
     height: "150px"
   };
-  const { getByTestId } = 
+  const { getByTestId, getByText } = 
     render(<Box 
       color={newBox.color}
       width={newBox.width}
       height={newBox.height}
-      testId={"testBox1"}
+      id={0}
     />);
-  const newBoxDiv = getByTestId("testBox1");
+
+  const newBoxDiv = getByTestId("box0");
   expect(newBoxDiv).toBeInTheDocument();
-  expect(newBoxDiv.className).toBe('Box');
+  expect(newBoxDiv.className).toBe('boxDiv');
   expect(newBoxDiv.style.backgroundColor).toBe("red");
-})
+});

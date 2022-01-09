@@ -65,19 +65,12 @@ exports[`renders snapshot 1`] = `
           <div
             class="form-group"
           >
-            <button
-              type="submit"
-            >
+            <button>
               make new box
             </button>
           </div>
         </form>
       </div>
-      <div
-        class="Box"
-        data-testid="box0"
-        style="background-color: blue; width: 150px; height: 90px;"
-      />
     </div>
   </div>
 </DocumentFragment>
