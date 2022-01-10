@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Todo = ({ id, todo, deleteTodo }) => {
-  const htmlId = `todo${id}`;
-  const testId = `test-${htmlId}`;
+const Todo = ({ id, todo, deleteTodo, editThisTodo }) => {
+  const deleteId = `deleteTodo${id}`;
+  const testId = `test-${deleteId}`;
   const deleteThisTodo = () => { deleteTodo(id) };
   return (
     <li className="Todo">
       <button 
         className="deleteTodoButton"
         onClick={deleteThisTodo}
-        id={htmlId}
+        id={deleteId}
       >
         X
       </button>

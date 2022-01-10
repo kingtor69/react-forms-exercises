@@ -11,12 +11,13 @@ it('renders snapshot', () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-it('adds a new todo', () => {
-    const { queryByText, getByPlaceholderText } = render(<NewTodoForm />);
-    const newTodo = getByPlaceholderText("new todo");
-    const newBtn = queryByText("Create new todo");
-    expect(queryByText('eat a sandwich')).not.toBeInTheDocument();
-    fireEvent.change(newTodo, {target: {value: 'eat a sandwich'}});
-    fireEvent.click(newBtn);
-    expect(queryByText('eat a sandwich')).toBeInTheDocument();
-});
+it('runs create function when new todo submitted', () => {
+  const createFunc = jest.fn();
+  const {getByText} = render(
+    <NewTodoForm 
+      addTodo={createFunc} 
+    />);
+    const newTodoBtn = getByText("Create new todo");
+    fireEvent.click(newTodoBtn);
+    expect(createFunc).toHaveBeenCalled();
+})

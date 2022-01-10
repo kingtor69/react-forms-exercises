@@ -7,7 +7,7 @@ exports[`renders snapshot 1`] = `
   >
     <button
       class="deleteTodoButton"
-      id="todoundefined"
+      id="deleteTodoundefined"
     >
       X
     </button>
